@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom right, #e0e7ff, #f3e8ff, #fce7f3);
+            color: #1f2937;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+        }
+
+        .brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #023E8A;
+        }
+
+        /* Main Content */
+        main {
+            padding: 3rem 1rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        /* About Section */
+        #about {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            #about {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #023E8A;
+            margin-bottom: 1rem;
+        }
+
+        .about-text {
+            font-size: 1.125rem;
+            line-height: 1.7;
+        }
+
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-image {
+            width: 16rem;
+            height: 16rem;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgba(2, 62, 138, 0.2);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .linkedin-button {
+            background: #023E8A;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .linkedin-button:hover {
+            background: #03045E;
+        }
+
+        /* Skills Section */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .skill-tag {
+            background: rgba(2, 62, 138, 0.1);
+            color: #023E8A;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-weight: 600;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #023E8A;
+        }
+
+        .project-type {
+            font-size: 0.875rem;
+            color: #6b7280;
+            background: rgba(2, 62, 138, 0.1);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+        }
+
+        .project-description {
+            color: #4b5563;
+            margin-bottom: 1rem;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-tag {
+            background: rgba(2, 62, 138, 0.1);
+            color: #023E8A;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            padding: 1.5rem;
+            text-align: center;
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="brand">Mohamed</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="about">
+            <div>
+                <h2 class="section-title">About Me</h2>
+                <p class="about-text">
+                    Hi, I'm Mohamed Helmy, I am a Design Manager passionate about guiding projects. I work closely with my team to bring ideas to life, handling everything from planning and execution to documentation and implementation.
+                </p>
+            </div>
+            <div class="profile-container">
+                <img src="profile-photo.jpeg" alt="Profile" class="profile-image">
+                <a href="https://ae.linkedin.com/in/mohamed-helmy-6ab4403b" class="linkedin-button">LinkedIn</a>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2 class="section-title">The Technologies I Use</h2>
+            <div class="skills-container">
+                <span class="skill-tag">AutoCAD</span>
+                <span class="skill-tag">Revit</span>
+                <span class="skill-tag">BIM (Building Information Modeling)</span>
+                <span class="skill-tag">3D Modeling</span>
+                <span class="skill-tag">Project Management</span>
+                <span class="skill-tag">SketchUp</span>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-title">My Experience</h2>
+            <div class="projects-grid" id="projects-container">
+                <!-- Projects will be populated by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Projects data
+        const projects = [
+            {
+                type: 'May 2010 - Present',
+                name: 'Senior Design Manager',
+                description: 'Main lead design architect for diverse types of projects.',
+                technologies: ['Team Leadership', 'Project Management', 'Architecture']
+            },
+            {
+                type: 'Apr 2008 - Apr 2010',
+                name: 'Senior Site Architect',
+                description: 'Preparation of shop drawings, coordination between different engineering disciplines, sub consultants suppliers and manufacturer.',
+                technologies: ['Coordination', 'Site Supervision', 'Architectural Design']
+            },
+            {
+                type: 'Aug 2006 - Mar 2008',
+                name: 'Senior Design Architect',
+                description: 'Leading a team to deliver the architectural design of projects.',
+                technologies: ['Teamwork', 'Leader', 'Projects']
+            },
+            {
+                type: 'Jun 2003 - Aug 2006',
+                name: 'Design Architect',
+                description: 'Preparation of architectural design drawing through concept design, schematic design, design development. ',
+                technologies: ['Design Development', 'Project Meetings', 'Engineering']
+            },
+            {
+                type: 'Sep 2003 - May 2006',
+                name: 'Teaching Assistant',
+                description: 'Teaching 3D modeling to students for educational purposes.',
+                technologies: ['Teaching', '3D Modeling', 'Education']
+            }
+        ];
+
+        // Populate projects
+        function renderProjects() {
+            const projectsContainer = document.getElementById('projects-container');
+            
+            projects.forEach(project => {
+                const projectElement = document.createElement('div');
+                projectElement.className = 'project-card';
+                
+                projectElement.innerHTML = `
+                    <div class="project-header">
+                        <div>
+                            <h3 class="project-title">${project.name}</h3>
+                            <span class="project-type">${project.type}</span>
+                        </div>
+                    </div>
+                    <p class="project-description">${project.description}</p>
+                    <div class="project-tech">
+                        ${project.technologies.map(tech => `
+                            <span class="tech-tag">${tech}</span>
+                        `).join('')}
+                    </div>
+                `;
+                
+                projectsContainer.appendChild(projectElement);
+            });
+        }
+
+        // Initialize the page
+        renderProjects();
+    </script>
+</body>
+</html>
